@@ -1,6 +1,9 @@
 " no compatible with VI
 set nocompatible
 
+" use utf-8 encoding
+set encoding=utf-8
+
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
 " and for plugins that are filetype specific.
@@ -111,9 +114,6 @@ set smartcase
 " --------------------------------------------------
 " ///// Paper and Typing Setup /////////////////////
 " --------------------------------------------------
-" use utf-8 encoding
-set encoding=utf-8
-
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 
