@@ -19,8 +19,11 @@ $ vim
 in vim run vim-plug command
 
 > :PlugInstall --sync
+>
 > :source $MYVIMRC
+>
 > :PlugUpdate
+>
 > :PlugUpgrade
 
 done. :)
