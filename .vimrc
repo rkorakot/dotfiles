@@ -44,6 +44,9 @@ call plug#begin('~/.vim/plugged')
     Plug 'hail2u/vim-css3-syntax'
     Plug 'othree/html5.vim'
 
+    " Writing Environment
+    Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 " manual setup plug-in options
