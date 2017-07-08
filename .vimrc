@@ -30,6 +30,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'captbaritone/molokai'
     Plug 'sickill/vim-monokai'
     Plug 'chriskempson/vim-tomorrow-theme'
+    Plug 'vim-scripts/greenvision'
 
     " text filter and alignment
     "Plug 'godlygeek/tabular'
