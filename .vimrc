@@ -43,7 +43,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'plasticboy/vim-markdown'
     Plug 'elzr/vim-json'
     Plug 'fatih/vim-go'
-    Plug 'hdima/python-syntax'
+    Plug 'vim-python/python-syntax'
     Plug 'hail2u/vim-css3-syntax'
     Plug 'othree/html5.vim'
 
@@ -54,6 +54,7 @@ call plug#end()
 
 " manual setup plug-in options
 let g:vim_markdown_folding_disabled = 1 " vim-markdown : disable folding
+let g:python_highlight_all = 1 " enable all python syntax highlight
 
 " \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 

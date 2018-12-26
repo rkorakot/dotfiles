@@ -7,6 +7,13 @@ $ cd ~
 $ git clone https://github.com/rkorakot/dotfiles.git
 ```
 
+### Prompt
+
+```sh
+$ cd ~
+$ ln -s ~/dotfiles/.bash_profile ~/.bash_profile
+```
+
 ### vim
 
 ```sh
