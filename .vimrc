@@ -27,12 +27,12 @@ endif
 call plug#begin('~/.vim/plugged')
 
     " Colorschemes
-    Plug 'captbaritone/molokai'
+    Plug 'tomasr/molokai'
     Plug 'sickill/vim-monokai'
     Plug 'chriskempson/vim-tomorrow-theme'
-    Plug 'vim-scripts/greenvision'
     Plug 'sjl/badwolf'
     Plug 'reedes/vim-colors-pencil'
+    Plug 'fxn/vim-monochrome'
 
     " text filter and alignment
     "Plug 'godlygeek/tabular'
@@ -73,7 +73,8 @@ autocmd BufReadPost * if &key != "" | set noswapfile nowritebackup viminfo= noba
 set t_Co=256 " Enable 256 colors
 syntax on " Enable syntax highlighting
 set background=dark " dark background is cool
-colorscheme badwolf " ~/.vim/colors/
+colorscheme molokai " default colorscheme
+
 
 set title " Show title
 
