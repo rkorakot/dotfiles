@@ -95,6 +95,7 @@ set laststatus=2
 
 " Display line numbers on the left
 set number
+set relativenumber
 
 " highlight cursor line
 set cursorline
