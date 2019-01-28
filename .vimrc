@@ -38,14 +38,16 @@ call plug#begin('~/.vim/plugged')
     "Plug 'godlygeek/tabular'
 
     " Syntax
-    Plug 'tpope/vim-git'
+    "Plug 'tpope/vim-git'
     Plug 'NLKNguyen/c-syntax.vim'
-    Plug 'plasticboy/vim-markdown'
-    Plug 'elzr/vim-json'
-    Plug 'fatih/vim-go'
+    Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
     Plug 'vim-python/python-syntax'
-    Plug 'hail2u/vim-css3-syntax'
+    Plug 'StanAngeloff/php.vim'
+    Plug 'plasticboy/vim-markdown'
     Plug 'othree/html5.vim'
+    Plug 'hail2u/vim-css3-syntax'
+    Plug 'pangloss/vim-javascript'
+    Plug 'elzr/vim-json'
 
     " Writing Environment
     Plug 'junegunn/goyo.vim'
