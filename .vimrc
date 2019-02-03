@@ -59,6 +59,21 @@ call plug#end()
 let g:vim_markdown_folding_disabled = 1 " vim-markdown : disable folding
 let g:python_highlight_all = 1 " enable all python syntax highlight
 
+"PaperColor: enable built-in function and constants for c and python 
+let g:PaperColor_Theme_Options = {
+  \     'language': {
+  \       'python': {
+  \         'highlight_builtins' : 1
+  \       },
+  \       'cpp': {
+  \         'highlight_standard_library' : 1
+  \       },
+  \       'c': {
+  \         'highlight_builtins' : 1
+  \       }
+  \     }
+  \ }
+
 " \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 " --------------------------------------------------
@@ -76,7 +91,7 @@ autocmd BufReadPost * if &key != "" | set noswapfile nowritebackup viminfo= noba
 set t_Co=256 " Enable 256 colors
 syntax on " Enable syntax highlighting
 set background=dark " dark background is cool
-colorscheme badwolf " default colorscheme
+colorscheme PaperColor " default colorscheme
 
 
 set title " Show title
