@@ -1,3 +1,7 @@
+"--------------------------------------------------------------------------
+"  Basic Setup
+"--------------------------------------------------------------------------
+
 " no compatible with VI
 set nocompatible
 
@@ -9,9 +13,11 @@ set encoding=utf-8
 " and for plugins that are filetype specific.
 filetype plugin indent on
 
-" --------------------------------------------------
-" ///// Vim-Plug ///////////////////////////////////
-" --------------------------------------------------
+
+"--------------------------------------------------------------------------
+"  Vim-Plug Setup
+"--------------------------------------------------------------------------
+
 " Install vim-plug if we don't already have it
 if empty(glob('~/.vim/autoload/plug.vim'))
     " Ensure all needed directories exist  (Thanks @kapadiamush)
@@ -37,6 +43,7 @@ call plug#begin('~/.vim/plugged')
 
     " text filter and alignment
     "Plug 'godlygeek/tabular'
+    Plug 'Yggdroot/indentLine'
 
     " Syntax
     "Plug 'tpope/vim-git'
@@ -55,11 +62,24 @@ call plug#begin('~/.vim/plugged')
 
 call plug#end()
 
-" manual setup plug-in options
-let g:vim_markdown_folding_disabled = 1 " vim-markdown : disable folding
-let g:python_highlight_all = 1 " enable all python syntax highlight
 
-"PaperColor: enable built-in function and constants for c and python 
+"--------------------------------------------------------------------------
+"  Plug-in Config
+"--------------------------------------------------------------------------
+
+" vim-markdown : disable folding
+let g:vim_markdown_folding_disabled = 1 
+
+" python-syntax : enable all python syntax highlight
+let g:python_highlight_all = 1 
+
+" vim-css3-syntax : fix limitation of vim's hightlight
+augroup VimCSS3Syntax
+  autocmd!
+  autocmd FileType css setlocal iskeyword+=-
+augroup END
+
+"PaperColor : enable built-in function and constants for c and python 
 let g:PaperColor_Theme_Options = {
   \     'language': {
   \       'python': {
@@ -74,27 +94,34 @@ let g:PaperColor_Theme_Options = {
   \     }
   \ }
 
-" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-" --------------------------------------------------
-" ///// Security ///////////////////////////////////
-" --------------------------------------------------
+"--------------------------------------------------------------------------
+"  Security
+"--------------------------------------------------------------------------
+
 set hidden " Enable hidden buffers
 set cryptmethod=blowfish
 autocmd BufReadPost * if &key != "" | set noswapfile nowritebackup viminfo= nobackup noshelltemp history=0 secure | endif
 
-" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-" --------------------------------------------------
-" ///// SUI, Look and Feel /////////////////////////
-" --------------------------------------------------
-set t_Co=256 " Enable 256 colors
-syntax on " Enable syntax highlighting
-set background=dark " dark background is cool
-colorscheme PaperColor " default colorscheme
+"--------------------------------------------------------------------------
+"  Look & Feel, System User Interface
+"--------------------------------------------------------------------------
 
+" Enable 256 colors
+set t_Co=256
 
-set title " Show title
+" Enable syntax hightlighting
+syntax on
+
+" Dark background is cool
+set background=dark 
+
+" default coorscheme
+colorscheme PaperColor
+
+" Show title
+set title
 
 " Better command-line completion
 " press 'tab' for completion command when ':' mode
@@ -111,8 +138,8 @@ set ruler
 " Always display the status line, even if only one window is displayed
 set laststatus=2
 
-" Display line numbers on the left
-set number
+" Display relative line numbers on the left
+set nonumber
 set relativenumber
 
 " highlight cursor line
@@ -123,11 +150,11 @@ set list
 set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
-" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-" --------------------------------------------------
-" ///// Search Setup ///////////////////////////////
-" --------------------------------------------------
+"--------------------------------------------------------------------------
+"  Search Setup
+"--------------------------------------------------------------------------
+
 " Highlight searches (use <C-L> to temporarily turn off highlighting;
 " see the mapping of <C-L> below)
 set hlsearch
@@ -136,11 +163,11 @@ set hlsearch
 set ignorecase
 set smartcase
 
-" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-" --------------------------------------------------
-" ///// Paper and Typing Setup /////////////////////
-" --------------------------------------------------
+"--------------------------------------------------------------------------
+"  Paper and Typing Setup
+"--------------------------------------------------------------------------
+
 " Allow backspacing over autoindent, line breaks and start of insert action
 set backspace=indent,eol,start
 
@@ -161,12 +188,9 @@ set expandtab
 set textwidth=80
 set colorcolumn=+1
 
-" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-" --------------------------------------------------
-" ///// Mapping ////////////////////////////////////
-" --------------------------------------------------
+"--------------------------------------------------------------------------
+"  Mapping
+"--------------------------------------------------------------------------
 " mapping Ctrl+L = :nohl
 nnoremap <C-L> :nohl<CR><C-L>
-
-" \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
