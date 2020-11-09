@@ -39,7 +39,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'sickill/vim-monokai'
     Plug 'fxn/vim-monochrome'
     "Plug 'tomasr/molokai'
-    "Plug 'chriskempson/vim-tomorrow-theme'
 
     " text filter and alignment
     "Plug 'godlygeek/tabular'
