@@ -33,13 +33,13 @@ endif
 call plug#begin('~/.vim/plugged')
 
     " Colorschemes
-    Plug 'sjl/badwolf'
     Plug 'NLKNguyen/papercolor-theme'
-    Plug 'tomasr/molokai'
-    Plug 'sickill/vim-monokai'
-    Plug 'chriskempson/vim-tomorrow-theme'
     Plug 'reedes/vim-colors-pencil'
+    Plug 'sjl/badwolf'
+    Plug 'sickill/vim-monokai'
     Plug 'fxn/vim-monochrome'
+    "Plug 'tomasr/molokai'
+    "Plug 'chriskempson/vim-tomorrow-theme'
 
     " text filter and alignment
     "Plug 'godlygeek/tabular'
@@ -94,7 +94,6 @@ let g:PaperColor_Theme_Options = {
   \     }
   \ }
 
-
 "--------------------------------------------------------------------------
 "  Security
 "--------------------------------------------------------------------------
@@ -144,10 +143,13 @@ set relativenumber
 
 " highlight cursor line
 set cursorline
+" highlight cursor column
+"set cursorcolumn
 
 " Toggle invisible characters
 set list
-set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+"set listchars=tab:→\ ,eol:¬,trail:⋅,extends:❯,precedes:❮
+set listchars=tab:→\ ,eol:↓,trail:⋅,extends:❯,precedes:❮
 set showbreak=↪
 
 
