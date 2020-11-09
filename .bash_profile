@@ -1,8 +1,3 @@
-#GR='\[\e[32m\]' # Green
-#WH='\[\e[37m\]' # White
-#YE='\[\e[33m\]' # Yellow
-#RE='\[\e[31m\]' # Red
-#NC='\[\e[0m\]'  # Reset
 GR='\033[32m' # Green
 WH='\033[37m' # White
 YE='\033[33m' # Yellow
